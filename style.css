@@ -1,0 +1,117 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temp {
+  grid-area: temp;
+  font-size: 12px;
+  color: #f57842;
+  padding-right: 5px;
+  padding-top: 2px;
+}
+.curr {
+  grid-area: curr;
+  color: #eeeeee;
+  padding-right: 5px;
+}
+.ac {
+  grid-area: ac;
+  background-color: #f54242;
+}
+.div {
+  grid-area: div;
+  background-color: darkgray;
+}
+.mult {
+  grid-area: mult;
+  background-color: darkgray;
+}
+.sev {
+  grid-area: sev;
+  background-color: gray;
+}
+.eig {
+  grid-area: eig;
+  background-color: gray;
+}
+.nine {
+  grid-area: nine;
+  background-color: gray;
+}
+.minus {
+  grid-area: minus;
+  background-color: darkgray;
+}
+.four {
+  grid-area: four;
+  background-color: gray;
+}
+.five {
+  grid-area: five;
+  background-color: gray;
+}
+.six {
+  grid-area: six;
+  background-color: gray;
+}
+.add {
+  grid-area: add;
+  background-color: darkgray;
+}
+.one {
+  grid-area: one;
+  background-color: gray;
+}
+.two {
+  grid-area: two;
+  background-color: gray;
+}
+.thr {
+  grid-area: thr;
+  background-color: gray;
+}
+.eq {
+  grid-area: eq;
+  background-color: #427bf5;
+}
+.zero {
+  grid-area: zero;
+  background-color: gray;
+}
+.dec {
+  grid-area: dec;
+  background-color: gray;
+}
+
+.container {
+  width: 300px;
+  height: 320px;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 5% 10% 17% 17% 17% 17% 17%;
+  grid-template-areas:
+    "temp temp temp temp"
+    "curr curr curr curr"
+    "ac ac div mult"
+    "sev eig nine minus"
+    "four five six add"
+    "one two thr eq"
+    "zero zero dec eq";
+  padding: 0;
+  background-color: #222222;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eeeeee;
+  border: 0.5px solid black;
+}
+.tops {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
