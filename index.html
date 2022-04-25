@@ -4,29 +4,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
-    <div id="temp" class="temp tops"></div>
-    <div id="display" class="curr tops">0</div>
-    <div id="clear" class="ac centered" onclick="clearDis()">AC</div>
-    <div id="divide" class="div centered" onclick="division()">/</div>
-    <div id="multiply" class="mult centered" onclick="multiply()">X</div>
-    <div id="seven" class="sev centered" onclick="seven()">7</div>
-    <div id="eight" class="eig centered" onclick="eight()">8</div>
-    <div id="nine" class="nine centered" onclick="nine()">9</div>
-    <div id="subtract" class="minus centered" onclick="subtract()">-</div>
-    <div id="four" class="four centered" onclick="four()">4</div>
-    <div id="five" class="five centered" onclick="five()">5</div>
-    <div id="six" class="six centered" onclick="six()">6</div>
-    <div id="add" class="add centered" onclick="add()">+</div>
-    <div id="one" class="one centered" onclick="one()">1</div>
-    <div id="two" class="two centered" onclick="two()">2</div>
-    <div id="three" class="thr centered" onclick="three()">3</div>
-    <div id="equals" class="eq centered" onclick="equals()">=</div>
-    <div id="zero" class="zero centered" onclick="zero()">0</div>
-    <div id="decimal" class="dec centered" onclick="decimal()">.</div>
+  <div class="outer">
+    <div class="middle">
+      <div class="inner">
+        <div class="container">
+          <div id="temp" class="temp tops"></div>
+          <div id="display" class="curr tops">0</div>
+          <div id="clear" class="ac centered" onclick="clearDis()">AC</div>
+          <div id="divide" class="div centered" onclick="division()">/</div>
+          <div id="multiply" class="mult centered" onclick="multiply()">X</div>
+          <div id="seven" class="sev centered" onclick="seven()">7</div>
+          <div id="eight" class="eig centered" onclick="eight()">8</div>
+          <div id="nine" class="nine centered" onclick="nine()">9</div>
+          <div id="subtract" class="minus centered" onclick="subtract()">-</div>
+          <div id="four" class="four centered" onclick="four()">4</div>
+          <div id="five" class="five centered" onclick="five()">5</div>
+          <div id="six" class="six centered" onclick="six()">6</div>
+          <div id="add" class="add centered" onclick="add()">+</div>
+          <div id="one" class="one centered" onclick="one()">1</div>
+          <div id="two" class="two centered" onclick="two()">2</div>
+          <div id="three" class="thr centered" onclick="three()">3</div>
+          <div id="equals" class="eq centered" onclick="equals()">=</div>
+          <div id="zero" class="zero centered" onclick="zero()">0</div>
+          <div id="decimal" class="dec centered" onclick="decimal()">.</div>
+        </div>
+      </div>
+    </div>
   </div>
+  <script src="scripts.js"></script>
 </body>
 </html>
