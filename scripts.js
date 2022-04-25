@@ -1,5 +1,6 @@
 let inp = ''
 let tempInp = ''
+let previous = ''
 
 let temp = document.getElementById('temp')
 let display = document.getElementById('display')
@@ -7,8 +8,8 @@ function clearDis() {
   temp.textContent = '';
   display.textContent = '0';
   inp = '';
-  
   tempInp = '';
+  previous = '';
 }
 
 function nine() {
@@ -76,6 +77,9 @@ function zero() {
 }
 
 function division() {
+  if (previous) {
+    tempInp = previous
+  }
   if (tempInp.slice(-1) === '/' || tempInp.slice(-1) === '*' || tempInp.slice(-1) === '-' || tempInp.slice(-1) === '+') {
     tempInp = tempInp.slice(0,-1)
     tempInp += '/'
@@ -86,6 +90,9 @@ function division() {
   }
 }
 function multiply() {
+  if (previous) {
+    tempInp = previous
+  }
   if (tempInp.slice(-1) === '/' || tempInp.slice(-1) === '*' || tempInp.slice(-1) === '-' || tempInp.slice(-1) === '+') {
     tempInp = tempInp.slice(0,-1)
     tempInp += '*'
@@ -96,10 +103,16 @@ function multiply() {
   }
 }
 function subtract() {
+  if (previous) {
+    tempInp = previous
+  }
   tempInp += '-'
   temp.textContent = tempInp
 }
 function add() {
+  if (previous) {
+    tempInp = previous
+  }
   if (tempInp.slice(-2) === '*-') {
     tempInp = tempInp.slice(0,-2)
     tempInp += '+'
@@ -118,8 +131,8 @@ function equals() {
   display.textContent = eval(tempInp)
   //tempInp += "="
   temp.textContent = tempInp
-  
-  tempInp = eval(tempInp)
+  tempInp = eval(tempInp) //
+  previous = eval(tempInp).toString()
 }
 
 function decimal() {
