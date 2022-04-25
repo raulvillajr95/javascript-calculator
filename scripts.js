@@ -15,62 +15,63 @@ function nine() {
   inp += 9
   tempInp += 9
   temp.textContent = tempInp
-  display.textContent = inp
+  display.textContent = tempInp
 }
 function eight() {
   inp += 8
   tempInp += 8
   temp.textContent = tempInp
-  display.textContent = inp
+  display.textContent = tempInp
 }
 function seven() {
   inp += 7
   tempInp += 7
   temp.textContent = tempInp
-  display.textContent = inp
+  display.textContent = tempInp
 }
 function six() {
   inp += 6
   tempInp += 6
   temp.textContent = tempInp
-  display.textContent = inp
+  display.textContent = tempInp
 }
 function five() {
   inp += 5
   tempInp += 5
   temp.textContent = tempInp
-  display.textContent = inp
+  display.textContent = tempInp
 }
 function four() {
   inp += 4
   tempInp += 4
   temp.textContent = tempInp
-  display.textContent = inp
+  display.textContent = tempInp
 }
 function three() {
   inp += 3
   tempInp += 3
   temp.textContent = tempInp
-  display.textContent = inp
+  display.textContent = tempInp
 }
 function two() {
   inp += 2
   tempInp += 2
   temp.textContent = tempInp
-  display.textContent = inp
+  display.textContent = tempInp
 }
 function one() {
   inp += 1
   tempInp += 1
   temp.textContent = tempInp
-  display.textContent = inp
+  display.textContent = tempInp
 }
 function zero() {
   if (tempInp !== '0') {
     inp += 0
     tempInp += 0
     temp.textContent = tempInp
-    display.textContent = inp
+    //display.textContent = inp
+    display.textContent = tempInp
   }
 }
 
@@ -95,17 +96,15 @@ function multiply() {
   }
 }
 function subtract() {
-  if (tempInp.slice(-1) === '/' || tempInp.slice(-1) === '*' || tempInp.slice(-1) === '-' || tempInp.slice(-1) === '+') {
-    tempInp = tempInp.slice(0,-1)
-    tempInp += '-'
-    temp.textContent = tempInp
-  } else {
-    tempInp += '-'
-    temp.textContent = tempInp
-  }
+  tempInp += '-'
+  temp.textContent = tempInp
 }
 function add() {
-  if (tempInp.slice(-1) === '/' || tempInp.slice(-1) === '*' || tempInp.slice(-1) === '-' || tempInp.slice(-1) === '+') {
+  if (tempInp.slice(-2) === '*-') {
+    tempInp = tempInp.slice(0,-2)
+    tempInp += '+'
+    temp.textContent = tempInp
+  } else if (tempInp.slice(-1) === '/' || tempInp.slice(-1) === '*' || tempInp.slice(-1) === '-' || tempInp.slice(-1) === '+') {
     tempInp = tempInp.slice(0,-1)
     tempInp += '+'
     temp.textContent = tempInp
@@ -117,8 +116,10 @@ function add() {
 
 function equals() {
   display.textContent = eval(tempInp)
-  tempInp += "="
+  //tempInp += "="
   temp.textContent = tempInp
+  
+  tempInp = eval(tempInp)
 }
 
 function decimal() {
@@ -126,8 +127,7 @@ function decimal() {
   if (splitted[splitted.length-1].includes('.') === false) {
     tempInp += "."
     temp.textContent = tempInp
+    
+    display.textContent = tempInp
   }
-  console.log(splitted)
-  console.log(splitted[splitted.length-1])
-  console.log(splitted[splitted.length-1].includes('.'))
 }
